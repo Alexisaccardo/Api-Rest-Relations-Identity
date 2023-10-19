@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "3a9a83ad-d765-451d-bb6c-cc120bf122a1",
+		"name": "Identities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29027861"
+	},
+	"item": [
+		{
+			"name": "Register_identity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n        \"document\": \"209888\",\r\n        \"name\": \"MeLi\",\r\n        \"cellphone\": \"3224567654\",\r\n        \"address\": \"Medellin-Antioquia\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/register_identity",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register_identity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register_relations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"Andres Trujillo\",\r\n        \"ally\": \"Sin aliado\",\r\n        \"document_identity\": \"209888\"\r\n    \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/register_relations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register_relations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search_identity",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/search_identity",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"search_identity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search_relations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/search_relations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"search_relations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit_relations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n        \"id\": \"eb47a3\",\r\n        \"name\": \"Johan Alexis\",\r\n        \"ally\": \"MeLi\",\r\n        \"document_identity\": \"209888\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/edit_relations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"edit_relations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit_identity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"document\": \"209888\",\r\n        \"name\": \"MeLi\",\r\n        \"cellphone\": \"3225678786\",\r\n        \"address\": \"Medellin\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/edit_identity",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"edit_identity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_relation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"9db6e6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/delete_relation",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete_relation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_identity",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"document\": \"209888\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/delete_identity",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete_identity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
